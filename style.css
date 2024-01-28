@@ -1,12 +1,13 @@
 html {
+    background-color: black;
     background-image: linear-gradient(black, #660086);
+    background-attachment: fixed;
 }
 
 body {
     color: #fff;
 
     font-family: Roboto;
-    height: 100vh;
 }
 
 a {

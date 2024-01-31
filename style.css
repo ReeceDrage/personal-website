@@ -16,13 +16,7 @@ a {
 }
 
 h1 {
-    display: inline-block;
-    margin: 0;
     font-size: 2.125rem;
-}
-
-p {
-    font-size: 1rem;
 }
 
 @media screen and (min-height: 375px) {
@@ -38,8 +32,8 @@ p {
         transform: translate(-50%, -50%);
     }
 
-    .spacer {
-        padding-top: 30px;
+    .padding-bottom {
+        margin-bottom: 40px;
     }
 }
 
@@ -50,8 +44,8 @@ p {
         text-align: center;
     }
 
-    .spacer {
-        padding-top: 10px;
+    .padding-bottom {
+        margin-bottom: 10px;
     }
 }
 
@@ -60,19 +54,27 @@ p {
     width: 25px;
 }
 
-.flex-row {
+.contact-details {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    column-gap: 20px;
+}
+
+
+.contact-row {
     display: flex;
     flex-direction: row;
 
     align-items: center;
     justify-content: center;
-    gap: 10px;
-}
 
-.inner-div {
-    display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
+    gap: 10px;
 }
 
 .vertical-offset {
@@ -81,6 +83,11 @@ p {
 
 .underline {
     text-decoration: underline;
+}
+
+.emoji {
+    display: inline-block;
+    padding-right: 1px;
 }
 
 @keyframes wave {
@@ -105,10 +112,11 @@ p {
     }
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
